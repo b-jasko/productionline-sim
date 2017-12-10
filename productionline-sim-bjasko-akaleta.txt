@@ -1,0 +1,16 @@
+Jako ¿e w poleceniu zadania jest zalecone, aby sieæ sk³ada³a siê z 
+wêz³ów, musimy utworzyæ reprezentuj¹c¹ je klase abstrakcyjn¹ po której 
+bêd¹ dziedziczyæ klasy reprezentuj¹ce elementy sieci (tj. rampy, 
+robotnicy i magazyny). Dodatkowo utworzymy klasê link, która bêdzie 
+posiadaæ parametry source i destination, parametry te bêd¹ wskaŸnikami 
+abstrakcyjnego typu node, dziêki czemu bêdziemy mogli korzystaæ z 
+polimorfizmu nie przejmuj¹c siê typem na jaki bêd¹ wskazywaæ.
+
+Kolejn¹ klas¹ jak¹ stworzymy bêdzie interfejs s³u¿¹cy do raportowania 
+o strukturze sieci i o stanie symulacji. Bêdzie on posiada³ pola z 
+wektorami adresów wszystkich wêz³ów i po³¹czeñ, oraz metody pozwalaj¹ce 
+na dodanie nowych adresów do tych wektorów. Metody te bêd¹ wywo³ane w
+konstruktorach wêz³ów i po³¹czeñ, dziêki temu w dowolnym momencie
+nasz interfejs bêdzie mia³ dostêp do wszystkich danych. Konkretne opcje 
+raportowania bêd¹ reprezentowane przez klasy dziedzicz¹ce po 
+interfejsie.

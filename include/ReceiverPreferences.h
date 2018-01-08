@@ -1,0 +1,14 @@
+//
+// Created by Artur on 08.01.2018.
+//
+
+#ifndef PRODUCTIONLINE_SIM_RECEIVERPREFERENCES_H
+#define PRODUCTIONLINE_SIM_RECEIVERPREFERENCES_H
+
+
+class ReceiverPreferences {
+
+};
+
+
+#endif //PRODUCTIONLINE_SIM_RECEIVERPREFERENCES_H

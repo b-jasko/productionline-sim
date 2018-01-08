@@ -3,3 +3,7 @@
 //
 
 #include "../include/IntervalReportNotifier.h"
+
+IntervalReportNotifier::IntervalReportNotifier() {
+
+}

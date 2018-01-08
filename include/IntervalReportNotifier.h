@@ -8,6 +8,8 @@
 
 class IntervalReportNotifier {
 
+public:
+    IntervalReportNotifier();
 };
 
 

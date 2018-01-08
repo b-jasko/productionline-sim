@@ -3,3 +3,7 @@
 //
 
 #include "../include/Factory.h"
+
+Factory::Factory() {
+
+}

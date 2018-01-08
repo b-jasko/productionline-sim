@@ -8,6 +8,8 @@
 
 class Ramp {
 
+public:
+    Ramp();
 };
 
 

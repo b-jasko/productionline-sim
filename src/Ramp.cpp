@@ -3,3 +3,7 @@
 //
 
 #include "../include/Ramp.h"
+
+Ramp::Ramp() {
+
+}

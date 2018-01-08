@@ -8,6 +8,8 @@
 
 class PackageSender {
 
+public:
+    PackageSender();
 };
 
 

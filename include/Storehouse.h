@@ -5,7 +5,7 @@
 #ifndef PRODUCTIONLINE_SIM_STOREHOUSE_H
 #define PRODUCTIONLINE_SIM_STOREHOUSE_H
 
-#include "../Types/types.h"
+#include "./Types/types.h"
 #include "IPackageDepot.h"
 
 class Storehouse {

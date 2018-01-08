@@ -1,0 +1,14 @@
+//
+// Created by bartek on 1/8/18.
+//
+
+#ifndef PRODUCTIONLINE_SIM_IPACKAGEQUEUE_H
+#define PRODUCTIONLINE_SIM_IPACKAGEQUEUE_H
+
+
+class IPackageQueue {
+
+};
+
+
+#endif //PRODUCTIONLINE_SIM_IPACKAGEQUEUE_H

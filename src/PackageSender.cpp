@@ -3,3 +3,7 @@
 //
 
 #include "../include/PackageSender.h"
+
+PackageSender::PackageSender() {
+
+}

@@ -3,3 +3,7 @@
 //
 
 #include "../include/PackageQueue.h"
+
+PackageQueue::PackageQueue() {
+
+}

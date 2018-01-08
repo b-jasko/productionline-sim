@@ -3,5 +3,5 @@ project(productionline_sim)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES src/main.cpp src/Factory.cpp include/Factory.h)
+set(SOURCE_FILES src/main.cpp src/Factory.cpp include/Factory.h include/Worker.h include/types.h)
 add_executable(productionline_sim ${SOURCE_FILES})

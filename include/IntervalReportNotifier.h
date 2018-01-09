@@ -6,10 +6,13 @@
 #define PRODUCTIONLINE_SIM_INTERVALREPORTNOTIFIER_H
 
 
-class IntervalReportNotifier {
+#include "Types/types.h"
 
+class IntervalReportNotifier {
+    TimeOffset interval;
 public:
-    IntervalReportNotifier();
+    IntervalReportNotifier(TimeOffset);
+    bool shouldGenerateReport(Time);
 };
 
 

@@ -6,10 +6,16 @@
 #define PRODUCTIONLINE_SIM_RAMP_H
 
 
-class Ramp {
+#include "Types/types.h"
 
+class Ramp {
+    ElementID id;
+    TimeOffset deliveryInterval;
 public:
-    Ramp();
+    Ramp(ElementID, TimeOffset);
+    void deliverGoods(Time);
+    ElementID getId() const;
+    TimeOffset getDeliveryInterval() const;
 };
 
 

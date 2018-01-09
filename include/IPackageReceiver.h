@@ -6,8 +6,15 @@
 #define PRODUCTIONLINE_SIM_IPACKAGERECEIVER_H
 
 
-class IPackageReceiver {
+#include "Types/Package.h"
+#include "Types/ReceiverType.h"
 
+class IPackageReceiver {
+public:
+    void receivePackage(Package);
+    Package viewDepot(); // []?
+    ReceiverType getReceiverType();
+    ElementID getId();
 };
 
 

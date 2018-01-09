@@ -4,6 +4,14 @@
 
 #include "../include/Factory.h"
 
-Factory::Factory() {
+const std::vector<Ramp> &Factory::getRamps() const {
+    return ramps;
+}
 
+const std::vector<Worker> &Factory::getWorkers() const {
+    return workers;
+}
+
+const std::vector<Storehouse> &Factory::getStorehouses() const {
+    return storehouses;
 }

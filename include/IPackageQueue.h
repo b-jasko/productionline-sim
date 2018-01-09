@@ -6,8 +6,14 @@
 #define PRODUCTIONLINE_SIM_IPACKAGEQUEUE_H
 
 
-class IPackageQueue {
+#include "Types/Package.h"
+#include "IPackageDepot.h"
+#include "Types/QueueType.h"
 
+class IPackageQueue : public IPackageDepot{
+public:
+    Package pop();
+    QueueType getQueueType();
 };
 
 

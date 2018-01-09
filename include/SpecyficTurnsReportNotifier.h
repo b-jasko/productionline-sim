@@ -8,8 +8,9 @@
 
 #include <set>
 #include "Types/types.h"
+#include "IReportNotifier.h"
 
-class SpecyficTurnsReportNotifier {
+class SpecyficTurnsReportNotifier : IReportNotifier {
     std::set<Time> turns;
 
 public:

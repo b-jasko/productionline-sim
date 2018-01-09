@@ -7,12 +7,19 @@
 
 #include "Types/types.h"
 #include "IPackageDepot.h"
+#include "Types/Package.h"
+#include "IPackageReceiver.h"
 
-class Storehouse {
+class Storehouse : IPackageReceiver{
     ElementID id;
     IPackageDepot* depot;
 public:
-    Storehouse(ElementID id) : id(id) {}
+    Storehouse(ElementID);
+    void receivePackage(Package);
+    Package* viewDepot();
+    ElementID getId();
+
+
 };
 
 

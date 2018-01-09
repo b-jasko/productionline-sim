@@ -6,8 +6,13 @@
 #define PRODUCTIONLINE_SIM_IPACKAGEDEPOT_H
 
 
-class IPackageDepot {
+#include "Types/Package.h"
 
+class IPackageDepot {
+    void push(Package);
+    bool empty();
+    bool size();
+    Package* view();
 };
 
 

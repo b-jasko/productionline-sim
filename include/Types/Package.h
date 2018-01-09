@@ -11,7 +11,9 @@ class Package {
     ElementID id;
     ElementID  packageCounter;      //W UML-u podkreślone
 public:
-    Package() {}
+    Package();
+    Package(ElementID);
+    ElementID getID;
 
 };
 

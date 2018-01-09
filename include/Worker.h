@@ -8,20 +8,28 @@
 #include "Factory.h"
 #include "Types/types.h"
 #include "IPackageQueue.h"
+#include "PackageSender.h"
+#include "Types/Package.h"
+#include "Types/ReceiverType.h"
 
 
-class Worker : public Factory{
+class Worker : public PackageSender{
     ElementID id;
     TimeOffset processingDuration;
     Time packageProcessingStartTime;
     IPackageQueue* queue;
 public:
-    Worker(ElementID id, TimeOffset processingDuration, IPackageQueue *queue)
-            : id(id),
-              processingDuration(processingDuration),
-              queue(queue) {}
-
+    Worker(ElementID, TimeOffset, IPackageQueue*);
+    void receivePackage(Package);
+    Package* viewDepot();
+    void doWork();
+    TimeOffset getProcessingDuration();
+    Time getPackageProcessingStartTime();
+    ReceiverType getReceiverType();
+    ElementID getID();
 };
+
+
 
 
 #endif //PRODUCTIONLINE_SIM_WORKER_H

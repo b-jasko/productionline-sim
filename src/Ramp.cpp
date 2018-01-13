@@ -7,3 +7,11 @@
 Ramp::Ramp() {
 
 }
+
+ElementID Ramp::getId() const {
+    return id;
+}
+
+TimeOffset Ramp::getDeliveryInterval() const {
+    return deliveryInterval;
+}

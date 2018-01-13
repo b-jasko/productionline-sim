@@ -6,10 +6,16 @@
 #define PRODUCTIONLINE_SIM_PACKAGESENDER_H
 
 
-class PackageSender {
+#include <vector>
+#include "ReceiverPreferences.h"
 
+class PackageSender {
+    ReceiverPreferences receiverPreferences;
+    std::vector<Package> sendingBuffer;
 public:
-    PackageSender();
+    PackageSender(ElementID);
+    void sendPackage();
+    Package viewSendingBuffer(); // Package[]
 };
 
 

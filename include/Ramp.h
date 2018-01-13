@@ -7,8 +7,9 @@
 
 
 #include "Types/types.h"
+#include "PackageSender.h"
 
-class Ramp {
+class Ramp: public PackageSender {
     ElementID id;
     TimeOffset deliveryInterval;
 public:

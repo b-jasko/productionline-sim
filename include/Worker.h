@@ -13,7 +13,7 @@
 #include "Types/ReceiverType.h"
 
 
-class Worker : public PackageSender{
+class Worker : public PackageSender, public IPackageReceiver{
     ElementID id;
     TimeOffset processingDuration;
     Time packageProcessingStartTime;

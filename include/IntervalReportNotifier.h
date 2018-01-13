@@ -7,8 +7,9 @@
 
 
 #include "Types/types.h"
+#include "IReportNotifier.h"
 
-class IntervalReportNotifier {
+class IntervalReportNotifier: public IReportNotifier {
     TimeOffset interval;
 public:
     IntervalReportNotifier(TimeOffset);

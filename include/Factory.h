@@ -5,27 +5,27 @@
 #ifndef PRODUCTIONLINE_SIM_FACTORY_H
 #define PRODUCTIONLINE_SIM_FACTORY_H
 
-
-#include <vector>
+    
 #include "Ramp.h"
 #include "Storehouse.h"
 #include "Worker.h"
+#include <list>
 
 class Factory {
 private:
-    std::vector<Ramp> ramps;
-    std::vector<Worker> workers;
-    std::vector<Storehouse> storehouses;
+    std::list<Ramp> ramps;
+    std::list<Worker> workers;
+    std::list<Storehouse> storehouses;
 public:
-    const std::vector<Ramp> &getRamps() const;
+    const std::list<Ramp> &getRamps() const;
     void addRamp(Ramp);
     void removeRamp(ElementID);
 
-    const std::vector<Worker> &getWorkers() const;
+    const std::list<Worker> &getWorkers() const;
     void addWorker(Worker);
     void removeWorker(ElementID);
 
-    const std::vector<Storehouse> &getStorehouses() const;
+    const std::list<Storehouse> &getStorehouses() const;
     void addStorehouse(Storehouse);
     void removeStorehouse(ElementID);
 

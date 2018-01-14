@@ -13,7 +13,9 @@ class PackageSender {
     ReceiverPreferences receiverPreferences;
     std::vector<Package> sendingBuffer;
 public:
-    PackageSender(ElementID);
+    PackageSender();
+    explicit PackageSender(ElementID);
+
     void sendPackage();
     Package viewSendingBuffer(); // Package[]
 };

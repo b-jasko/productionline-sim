@@ -6,13 +6,15 @@
 #define PRODUCTIONLINE_SIM_IPACKAGEDEPOT_H
 
 
+#include <deque>
 #include "Types/Package.h"
 
 class IPackageDepot {
-    void push(Package);
-    bool empty();
-    bool size();
-    Package* view();
+public:
+    virtual void push(Package) = 0;
+    virtual bool empty() = 0;
+    virtual int size() = 0;
+    virtual std::deque<Package> view() = 0;
 };
 
 

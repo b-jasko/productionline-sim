@@ -4,7 +4,7 @@
 
 #include "../include/Ramp.h"
 
-Ramp::Ramp() {
+Ramp::Ramp(ElementID, TimeOffset) {
 
 }
 
@@ -15,3 +15,4 @@ ElementID Ramp::getId() const {
 TimeOffset Ramp::getDeliveryInterval() const {
     return deliveryInterval;
 }
+

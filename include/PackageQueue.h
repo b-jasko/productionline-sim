@@ -18,11 +18,11 @@ class PackageQueue: public IPackageQueue {
 public:
     explicit PackageQueue(QueueType _queueType);
     bool isEmpty();
-    int size() override;
-    void push(Package _package);
+    int size() const override;
+    void push(Package _package) override;
     QueueType getQueueType();
-    Package pop();
-    std::deque<Package> view();
+    Package pop() override;
+    std::deque<Package> view() const override;
 };
 
 

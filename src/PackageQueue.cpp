@@ -24,7 +24,7 @@ bool PackageQueue::isEmpty() {
     return deque.empty();
 }
 
-int PackageQueue::size() {
+int PackageQueue::size() const{
     return int(deque.size());
 }
 
@@ -40,6 +40,6 @@ Package PackageQueue::pop() {
     return _popFunction();
 }
 
-std::deque<Package> PackageQueue::view() {
+std::deque<Package> PackageQueue::view() const{
     return deque;
 }

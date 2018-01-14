@@ -10,9 +10,11 @@
 #include "ReceiverPreferences.h"
 
 class PackageSender {
-    ReceiverPreferences receiverPreferences;
+protected:
     std::vector<Package> sendingBuffer;
 public:
+    ReceiverPreferences receiverPreferences;
+
     PackageSender();
     explicit PackageSender(ElementID);
 

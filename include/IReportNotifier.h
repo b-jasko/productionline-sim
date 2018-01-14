@@ -9,7 +9,7 @@
 #include "Types/types.h"
 
 class IReportNotifier {
-    bool shouldGenerateReport(Time);    
+    virtual bool shouldGenerateReport(Time) = 0;
 };
 
 

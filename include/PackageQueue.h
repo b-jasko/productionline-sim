@@ -9,6 +9,7 @@
 #include <functional>
 #include "Types/QueueType.h"
 #include "IPackageQueue.h"
+#include "Types/Package.h"
 
 class PackageQueue: public IPackageQueue {
     QueueType queueType;

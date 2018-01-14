@@ -10,6 +10,7 @@
 
 class ReceiverPreferences {
     std::map<IPackageReceiver*, double> probabilities;
+
 public:
     const std::map<IPackageReceiver *, double> &getProbabilities() const;
     void setProbabilities(const std::map<IPackageReceiver *, double> &probabilities);

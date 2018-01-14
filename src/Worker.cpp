@@ -8,3 +8,7 @@ Worker::Worker(ElementID id, TimeOffset processingDuration, IPackageQueue *queue
         id(id),
         processingDuration(processingDuration),
         queue(queue) {}
+
+ReceiverType Worker::getReceiverType() {
+    return ReceiverType::WORKER;
+}

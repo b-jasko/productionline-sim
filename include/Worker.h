@@ -18,10 +18,11 @@ class Worker : public PackageSender, public IPackageReceiver{
     TimeOffset processingDuration;
     Time packageProcessingStartTime;
     IPackageQueue* queue;
+    std::vector<Package> currentlyProccessedPackage;
 public:
     Worker(ElementID, TimeOffset, IPackageQueue*);
     void receivePackage(Package);
-    Package* viewDepot();
+    Package* viewQueue();
     void doWork();
     TimeOffset getProcessingDuration();
     Time getPackageProcessingStartTime();

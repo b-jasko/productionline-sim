@@ -11,10 +11,10 @@
 
 class IPackageReceiver {
 public:
-    void receivePackage(Package);
-    Package viewDepot(); // []?
-    ReceiverType getReceiverType();
-    ElementID getId();
+    virtual void receivePackage(Package) = 0;
+    virtual std::deque<Package> viewDepot() const = 0;
+    virtual ReceiverType getReceiverType() const = 0;
+    virtual ElementID getId() const = 0;
 };
 
 

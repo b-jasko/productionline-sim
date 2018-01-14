@@ -12,8 +12,8 @@
 
 class IPackageQueue : public IPackageDepot{
 public:
-    Package pop();
-    QueueType getQueueType();
+    virtual Package pop() = 0;
+    virtual QueueType getQueueType() = 0;
 };
 
 

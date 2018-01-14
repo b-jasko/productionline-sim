@@ -11,12 +11,17 @@
 #include "IPackageQueue.h"
 
 class PackageQueue: public IPackageQueue {
-    QueueType QueueType;
+    QueueType queueType;
     std::deque<Package> deque;
-    std::function<Package()> _popfunction;
+    std::function<Package()> _popFunction;
 public:
-    PackageQueue(QueueType);
+    explicit PackageQueue(QueueType _queueType);
     bool isEmpty();
+    int size() override;
+    void push(Package _package);
+    QueueType getQueueType();
+    Package pop();
+    std::deque<Package> view();
 };
 
 

@@ -18,15 +18,17 @@ class Worker : public PackageSender, public IPackageReceiver{
     TimeOffset processingDuration;
     Time packageProcessingStartTime;
     IPackageQueue* queue;
+    std::vector<Package> currentlyProccessedPackage;
 public:
     Worker(ElementID, TimeOffset, IPackageQueue*);
     void receivePackage(Package);
-    Package* viewDepot();
+    std::deque<Package> viewQueue() const;
     void doWork();
-    TimeOffset getProcessingDuration();
-    Time getPackageProcessingStartTime();
-    ReceiverType getReceiverType();
-    ElementID getID();
+
+    TimeOffset getProcessingDuration() const;
+    Time getPackageProcessingStartTime() const;
+    ReceiverType getReceiverType() const override;
+    ElementID getId() const override;
 };
 
 

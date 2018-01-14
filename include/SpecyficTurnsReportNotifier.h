@@ -12,7 +12,6 @@
 
 class SpecyficTurnsReportNotifier : IReportNotifier {
     std::set<Time> turns;
-
 public:
     SpecyficTurnsReportNotifier(const std::set<Time> &turns) : turns(turns) {}
     bool shouldGenerateReport(Time);

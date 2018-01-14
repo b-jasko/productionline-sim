@@ -5,21 +5,22 @@
 #ifndef PRODUCTIONLINE_SIM_STOREHOUSE_H
 #define PRODUCTIONLINE_SIM_STOREHOUSE_H
 
+#include <vector>
 #include "Types/types.h"
 #include "IPackageDepot.h"
 #include "Types/Package.h"
 #include "IPackageReceiver.h"
+#include "Types/ReceiverType.h"
 
 class Storehouse : IPackageReceiver{
     ElementID id;
-    IPackageDepot* depot;
+    IPackageDepot* packageDepot;
 public:
-    Storehouse(ElementID);
-    void receivePackage(Package);
-    Package* viewDepot();
-    ElementID getId();
-
-
+    explicit Storehouse(ElementID);
+    void receivePackage(Package) override;
+    std::deque<Package> viewDepot() const override;
+    ReceiverType getReceiverType() const override;
+    ElementID getId() const override;
 };
 
 

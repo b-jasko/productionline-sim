@@ -4,6 +4,8 @@
 
 #include "../include/PackageSender.h"
 
-PackageSender::PackageSender() {
+PackageSender::PackageSender() {}
+
+PackageSender::PackageSender(ElementID) {
 
 }

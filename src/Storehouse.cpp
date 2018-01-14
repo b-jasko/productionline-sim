@@ -7,11 +7,11 @@
 Storehouse::Storehouse(const ElementID _id) : id(_id) {}
 
 void Storehouse::receivePackage(const Package _package) {
-    packageQueue.push_back(_package);
+    packageDepot -> push(_package);
 }
 
 std::deque<Package> Storehouse::viewDepot() const{
-    return packageQueue;
+    return packageDepot ->view();
 }
 
 ReceiverType Storehouse::getReceiverType() const{

@@ -15,7 +15,6 @@
 class Storehouse : IPackageReceiver{
     ElementID id;
     IPackageDepot* packageDepot;
-    std::deque<Package> packageQueue;
 public:
     explicit Storehouse(ElementID);
     void receivePackage(Package) override;

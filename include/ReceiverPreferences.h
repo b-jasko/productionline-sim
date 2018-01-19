@@ -7,6 +7,8 @@
 
 #include <map>
 #include "IPackageReceiver.h"
+#include <vector>
+
 
 class ReceiverPreferences {
     std::map<IPackageReceiver*, double> probabilities;
@@ -18,7 +20,7 @@ public:
     void addReceiverWithProbability(IPackageReceiver*, double);
     void removeReceiver(IPackageReceiver*);
     IPackageReceiver* drawReceiver();
-    std::pair<IPackageReceiver*, double>* view();
+    std::vector<std::pair<IPackageReceiver*, double>> view();
 };
 
 
